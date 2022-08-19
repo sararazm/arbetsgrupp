@@ -16,6 +16,5 @@ sequenceDiagram
 	API/Backend->>ClientApp: Return the generated JWT
 	ClientApp->>User:Allow access to token required area
 	User->>ClientApp: User navigates on restricted area
-	ClientApp->>API/Backend: JWT is sent and checked on every request
-
+	ClientApp->>API/Backend: JWT is sent and token is checked
 ```
