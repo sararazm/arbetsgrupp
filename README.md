@@ -5,8 +5,8 @@
 ```mermaid
 sequenceDiagram
 	actor User
-	participent ClientApp
-	participent API/Backend
+	participant ClientApp
+	participant API/Backend
 
 	User->>ClientApp: Enter Username and password
 	ClientApp->>API/Backend: Send request
