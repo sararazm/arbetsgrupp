@@ -1,10 +1,18 @@
 import "./App.css";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login/>}/>
+        <Route path="/Signup" element={<Signup/>}/>
+        
+      </Routes>
+    </Router>
   );
 }
 
