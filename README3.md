@@ -4,22 +4,22 @@
 3. [Installation](#installation)
 ### General Info
 ***
-A interactive website for users to write blogposts and also arrange quiz games. 
+A interactive website for users to write blogposts and also arrange quiz games.
 ### Screenshot
-![Image text](/relative/arbetsgrupp/client/quiz-app/src/assets/Login.jpg?raw=true)
+![Image text](/client/quiz-app/src/assets/Login.jpeg?raw=true)
 ## Technologies
 ***
 A list of technologies used within the project:
-* [Technology name](https://example.com): Version 12.3 
-* [Technology name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
+* [Coding Laungage](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Javascript
+* [React Framwork](https://reactjs.org): Framework for Javascript
+* [Tailwindcss](https://tailwindcss.com): Framework for CSS
 ## Installation
 ***
 A little intro about the installation. 
 ```
-$ git clone https://example.com
-$ cd ../path/to/the/file
+$ git clone https://github.com/sararazm/arbetsgrupp.git
+$ cd ../arbetsgrupp/client/quiz-app/
 $ npm install
 $ npm start
 ```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
+Start coding..
