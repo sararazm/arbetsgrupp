@@ -1,18 +1,46 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 
+function Register()
+{
+  const[name,setName]=useState("")
+  const[password,setPassword]=useState("")
+  const[email,setEmail]=useState("")
+  
 
-export default function Signup() {
-  return (
-    <div className='grid grid-cols-1 h-screen w-full'>
-       
+  
 
-        <div className='bg-orange-500 flex flex-col justify-center'>
-            <form className='max-w-[400px] w-full mx-auto bg-blue p-4'>
-               
-               <h6>Signup!</h6>
-            </form>
-        </div>
+  async function signUp()
+  {
+    let item={name,password,email}
+    console.warn(item)
+
+    let result= await fetch("http://localhost:3030/api/user/signup ", {
+      method:"POST",
+      body:JSON.stringify(item),
+      mode: "no-cors",
+      headers:{
+        "Content-type": 'application/json',
+        "Accept": 'application/json'
+      }
+    })
+    result =await result.json()
+    localStorage.setItem("user-info",JSON.stringify(result))
+    
+   
+  }
+  return(
+    <div>
+      <h1>Register Page</h1>
+      <input type="text" value={name} onChange={(e)=>setName(e.target.value)} />
+      <br />
+      <input type="password" value={password} onChange={(e)=>setEmail(e.target.value)} />
+      <br />
+      <input type="email" value={email} onChange={(e)=>setPassword(e.target.value)} />
+      <br />
+      <button onClick={signUp}>Signup</button>
     </div>
   )
 }
+
+export default Register
